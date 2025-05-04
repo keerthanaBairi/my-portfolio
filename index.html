@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link href="style.css" rel="stylesheet">
+ </head>
+ <body>
+ <!-- hero section  -->
+     <section class="hero">
+         <div class="hero h-text">
+          <h1>KEERTHANA BAIRI</h1>
+          <p>
+          <p id="short-intro">I am Keerthana Bairi , an engineering student with a strong passion for coding, innovation, and problem-solving.</p>
+          <p id="full-intro">I am a student very passionate and ambitious B.Tech Computer Science and Engineering student  With a strong interest in web development and software engineering, I am continuously honing my skills to build innovative and efficient solutions.
+            I created an e-commerce bespoke thrift store website using HTML, CSS, and Bootstrap, and
+             I am currently developing a code editor application by integrating compilation functionality.<br>
+            In addition to my technical skills, I have leadership and management experience. As a college coordinator, I have successfully managed large-scale events and placements, ensuring smooth organization and discipline balancing my academic and professional responsibilities effectively.
+            <br><br><br><br>
+            <center>
+            <img src="image4.jpg" alt="my photo" width="500" height="500">
+            </center>
+        </p>
+         </p>
+          <button id="read-more-intro" onclick="toggleIntro()">Read More</button>
+         </div>
+             <!-- <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJEBCAMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAACAwQAAQUG/8QAJRAAAgICAgEEAwEBAAAAAAAAAAECEQMhEjFBBCIyURNxgWFC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBAAF/8QAHBEBAQEBAAMBAQAAAAAAAAAAAAECERIhMQNB/9oADAMBAAIRAxEAPwD6J4jkcZc1F6YDxxTs3StWqn9sE7/p3BBt0uhjhbTRRijwd/Yeobdx4ZKRXjjJOjkFodj0zusn6GR5UNxuuzKXt6N8vBLVZb6o4ZErTDivoRKElTSGRXLvwKMtN+xd0dcjiTm6XgBnPt/YEVTodx+wZRS2zg4GUuKsFZLO0pPQMsaWl2LXCcrONgpSSBlLj35Eruhn8mKk41TDbqydxc3oVO0UF79FeON6EYcO9noYcOkT0r+eS1jplGKNUhn4jKNOhb6i2Z7OxjosTjKMcb2L9XzBII5HWjstjcMTm8k00UZPImSBw+SGgWh3GwZqkPIbqeZjT0YJ3m5/S+/9Ec49nsZ3cqPN9RC219G3NBE3xkUQVbBguTSK/wAdRoojsCkOxbFU01Q5NxWzmPeuKYMZ7b/0jjkcpUirAvsTU57Z/KWnRVxozxtW0NxqlYc1y2S6rz0kxxbdvooikloF6RxuS2juu+GOOgHjlLo0J32H+QBvpLw06Z2OEenas71sTtd4wiWJ1oRLH9l0pc1X0Teo3FL6BXWSJpRpMngo3sfKV2hS9uyZLxRg4plkZU9EOGVsp5b6/pymL6P526MvkJT33YyLFp5VER+N6JYsbCRPy9rZUWbwBFjY9Dz2Yma2Ka2VSjbsXKOh5DRPQvL0UV2JnEJoin2zDZx2YXi0Jznm51s9PLDsknj2zXlP+JsaGS6OxjTaOSfFFZWfdDDsfXtJvy26Dhkp0Mybo5a2Mw50qTOKXKxUo07Ft76ZPcvV8c68dg5PUyWv6T4LatGnjuVsnydV8rYqhl57fkKU+AOFcEh1qXYvo89lxYXNLTC4fQvItnDwxT1oJO2DFaQXWxDCb2LyRi1bM5XIBy9xzk+WFW0TS6Y7Lcm0gIYpA8U7TvT9jmxWOPF7HtW7J6h8/HMfY5Co6Y6CJ+1sjiOiBFDYonZVsmQWhqdC4hxjbsfMMLyDNasNriJySLTowD2KmH2KyM48IyswGV9mEVkHnjVsgzSVa7LvUyqzzczuzXlL+Fcny93RzKk0mji3NBNaLRLUJla0uzmNvl7uw5LQMexvL0xfqtwcWtmnG3oTCTSpFGJp7fZKodHjXFGVy6idyJJWgIy0IcabvapDOSS0TylWwPyXs53lxZinHk7Dbi2Qwnvbr6HJyYLBm1CkvATeiZunbMp2LwfI/lx/pyUbicx7dj1FU7OPIkcLBSp0NyuK0KnOuhpOkvIJDoRtWSRnyf6KoZI8VYmsnxYojjXFNmXehLzV0ZZq39iXPpeK4uK7GRcSJz6HY5bJTKsi7Gr2hyQr070N8FJOCGZNk7ZRJ6EZAjCn0IyofLoRN9i08TT6MBORhFoo9UuSbZ5eWG2evmq3RJlxKcLXZqzUevPiq0G+g1jd7CeO9FLqI7qZoHjtFMsPHYHR00x/o7FBwWwY7dFGKC8nVDMd42gXCtlDTXXQrL4sSVWwmdvvonm3FvitFMlYqUE3TGiOoneS2myrHkisTsGeFLHaJuDvQfpfeVSnbtBJ7JsacZW+imDTdroFPm207HKtjozu2J5VozloVaa9Nln2TS3sObFSloeI29rJ1obHLSol5bOp2wXNX/KK/wAl7BeSmhSegWzs5a8vQxTUlTKfTpWqPKwypnpelnehLlbnp6+D4jSX00q0UpkrC0OTolyOmU5HokyMFHJU5iMkvadyS7Ey2CqwjJs6aZiVWz8ejkjoRGF2i6WNeRUopdFPNitSPCc/CUOl2dbiolJpG1LPFFR2S5Mf0W5J2qQhofOkNlQgUYopO/Iu6dBRmvI9+JTkqp8WrEZt6QcXatGasnFamlA5FUVKNr9AtDdL4p5b0JljqVlyjYGbFbDKW5RcL2MgqVFEcaSbYHnQel8eFyhew8TuJu3Rpe1UF3wvJsRND1K5Ucz6Q8LZ32jfYUXQuV3o0X9lOel/yUJgt3KjY1yX62ca5P42JY2YOxYz0vSRcaaIsEeNLo9DA6pEqt309T0+1bG+BGHJGMFfkff0RpKVl6I8jLc3xIMvkWmyRMXJBt7Bk9AqkT5PJ02V6MSqufj15MVJnZCpiSsFBk7FN0Ma0JmtsedS0z2LnLjJhwi020J9Ru7LZqWgTy3s2J8mJiU4XFVY80nw+KrQaWzsNq0FQe9Ukc6ZyctHWjjjyVHO4VB8pfoa5Rfy/gP4uIEkOE+Gv3ITP2Wdhfg5mjKQYF+J45U5UuzmdutjMfp5LYc8Fq2HsiXLYjhLYclas2TC47QMXWmVnKn7l4XKDvQueNyat9Fb4tbEye9Dda8RyCXnYd06RodCsjrYta8RVjyVorw5Dy/Tytpno4VdMlpfj0MUuVIswWnrohxaTPQwfEjotdn07Ici7LMpLJWxKGUsogOOipxFygBXqPJEw3JA6Kpm+l01oTJFUxMiPixVPJC3HY6S2c4WWnxKkvRPmV2WTiS59aDLxLUStbQ6MeT/AEKyPY2Evagp9VYvj0UKN7I4Toox5aRSKZN40clHQmWU5HMEbYaoATg/B38rfQSlfYweqVFVphpJbYU9qyeeST+JxfiqLUlSAyKtC45NHJu1Z3PY+Xoj1Gl+yWUXeizjF7YM1FFs3iNz2pH7VbFOVyH5fNE7T8FI0fnDPyRUfcSZJNy0Fk0tk9+4DZiLPTvas9LEm2qPIxS4uy7B6imiWos9vHGopsohm4xSPOw+pTjT6OyzJfHojYXx6vll5IDwSY8xQpco2LZx3jxyXYNhAy6FEvJtGBcqTRgGelklasnl0Ol0JmR51lpM2lVnXkilQvK6tiHk2Nn1ENU7Nl1o831Gan1Y/LO6Ip8XJ2GX2l+mnHPnWh0LVUBCP/SHR2y0+JZ6KKrbDc3WjJBVao5QMJLz2FLbVAuFBRVFIHsyLC5PwIk+L/YQzujbk3SdfZkqXYPlDWjh+lZKS12LU5rT6HT6S+xc8NUwlrm3uPZySfH3dhTTirQmUpNDwJ9Ln2Kn8TuSe3ZNly02inGnAcrJ72L9Tluv8BWlZzXhRyWrD5VK0yKeTrX9OrNWuQtaMvTxepcHad2WQzc0r9p4EMt5LPVwT0idh+LYtp2nf+lvpMl6ZBFt99FPp5JNUJr4XXx6DFZHSsK7QMtxZnqUR5cphXqF2YldNGcyx78xGUxjo86pMvRHPsxgs+wolyfIxhso/oZD4jI/IxisDPw6I3H2zGD/AE8GDIxhxJy/Fh4/BwwxP6bLwEu2YxxoVPs0viv2YxwVz7Fv4sxiuSf1Hl6Ic3kxijVhHl6Zp/FGMc2YKmAjpgL5HD5x/Z7Hp/jH9oxielF0hmDyYxKlvxfi6OvpmMZ0Xn+p8nTGI6+tf5/H/9k=" class="hero-img"> -->
+     </section>
+     <script>
+ function toggleIntro() {
+     var fullIntro = document.getElementById("full-intro");
+     var button = document.getElementById("read-more-intro");
+ 
+     if (fullIntro.style.display === "none" || fullIntro.style.display === "") {
+         fullIntro.style.display = "block";  // Show full intro text
+         button.textContent = "Read Less";
+     } else {
+         fullIntro.style.display = "none";   // Hide full intro text
+         button.textContent = "Read More";
+     }
+ }
+ </script>
+ <!-- resume -->
+     <section class="resume-main">
+         <div class="resume">
+             <div class="image-R">
+                 <h1>Personal Details</h1>
+                 <img src="myimage1.jpg" alt="my photo" width="500" height="500">
+             </div>
+ 
+             <p>"Discover my professional journey, including<br>
+                  my education, projects, internships, and<br>
+                   coding skills. See how I’ve grown as an<br>
+                    engineering student."</p>
+             <a href="https://drive.google.com/file/d/1jsqzbxyOfGpCjd2tRmleDqNWnth-WuRr/view?usp=drivesdk">my resume</a>
+         </div>
+     </section>
+ 
+ <!-- projects -->
+     <div class="heading-pro">
+         <h1>MY PROJECTS</h1>
+         <p>"Designed and implemented various applications showcasing <br>coding and problem-solving skills."</p>
+     </div>  
+
+     <section class="projects">
+         <div class= "projects">
+            <div class="project one">
+                 <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySu-3dBliGRsyykXjrgluBPiK0FrGXTzNwA&s">
+                     <h1>Bespoke Thrift store website</h1>
+                     <p>"An online thrift store is a website or app where people buy and sell secondhand items at discounted prices, connecting buyers and sellers worldwide."</p>
+                     <a href="https://keerthanabairi.github.io/Bespoke/">More Details</a>
+                     
+                 </div>
+             </div>
+             <div class="project two">
+                 <div class="image-crypto">
+                 </div>
+                 <div class="encryption">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-3rcjT_26QY8nI9UPx9JZzgIofjEquwrKA&s">
+                     <h1>Encryption and Decryption</h1>
+                     <p>"We all work on the internet, we communicate through the internet, and want our data and information should be secured, and it is done by cryptography. Cryptography prevents the other user and attackers from accessing our confidential data and information"</p>
+                     <a href="https://github.com/keerthanaBairi/encryption-and-decryption.git">More Details</a>
+                 </div>
+             </div>
+             <div class="project three">
+                 <div class="image-code">
+                 </div>
+                 <div class="codeeditor">
+                    <img src="code editor.jpg">
+                     <h1>Code editor application</h1>
+                     <p>"Code editors or source code editors are software that is designed specifically to help developers with coding. These are text editors with additional functionalities to manage and edit code. It can can be a part of an IDECode editors are programming language-specific."</p>
+                     <a href="https://github.com/keerthanaBairi/codeeditor.git">More Details</a>
+                 </div>
+             </div>
+         </div>
+     </section>
+    <!-- certifications -->
+    <div class="heading-pro">
+        <h1>CERTIFICATIONS</h1>
+        <p>"These certifications highlight my hands-on experience and continuous learning in modern technologies.<br>  
+            Each program helped me build practical skills coding and problem-solving skills.<p>
+    </div>  
+     <section class="certificate-showcase">
+        <p class="section-intro">These are some of the applications and projects I’ve worked on, displayed in styled boxes below.</p>
+      
+        <div class="info-box">
+          <img src="nextgen.png" alt="nextgen">
+          <div class="info-content">
+            <h1>Nextgen Employability Program</h1>
+            <p>"This is the internship in collaboration with EY Global Delivery Services & AICTE on Building Modern Web Applications with Mern Stack."</p>
+            <a href="https://drive.google.com/file/d/17HdH0TxkKkUnNewh1E6EjUpxfQn83ShN/view?usp=drivesdk">More Details</a>
+
+        </div>
+        </div>
+        <div class="info-box">
+            <img src="ibm.jpg" alt="IBM skillsbuild">
+            <div class="info-content">
+              <h1>IBM SkillsBuild Summer Internship Program</h1>
+              <p>"This is the internship in collaboration with IBM SkillsBuild & CSRBOX that i created a simple website with Front-End "</p>
+          <a href="https://drive.google.com/file/d/1xWPJem8O9mBuhIRV4t0nfE9L7KjJ3vhT/view?usp=drivesdk">More Details</a>
+  
+            </div>
+          </div>
+      
+        <div class="info-box">
+          <img src="carbon footprint.jpg" alt="AICTE">
+          <div class="info-content">
+            <h1>Skills4Future Program</h1>
+            <p>"This is the 4 week virtual internship on Artificial Intelligence and Data Analytics.this program mainly focused on Green Skills.It i =s organized by AICTE ,shell india markets private limited and Edunet Foundation. "</p>
+        <a href="https://drive.google.com/file/d/1vY8TI3SG4_qPglCjYl4-sz_gzTUlXb60/view?usp=drivesdk">More Details</a>
+
+          </div>
+        </div>
+        <div class="info-box">
+            <img src="guvi.jpg" alt="GUVI">
+            <div class="info-content">
+              <h1>SAWIT.AI Learnathon Program From GUVI</h1>
+              <p>"This is the SAWIT.AI Learnathon program in collaboration with AICTE,nasscom,futureskills and it is supported by Women Techmakers and HCLTech"</p>
+              <a href="https://drive.google.com/file/d/1jdAnL210Lnl-Fw5DCYRfe3TDxv_8LNE1/view?usp=drivesdk">More Details</a>  
+            </div>
+          </div>
+          <div class="info-box">
+            <img src="ybi.jpg" alt="YBI">
+            <div class="info-content">
+              <h1>Data Science and Machine Learning Internship</h1>
+              <p>"This is the 4 weeks internship program in collaboration with ISO certified,i engaged in projects and tasks in the program"</p>
+              <a href="https://drive.google.com/file/d/1ja4nhsj8fWXxidG-eaS8wwJAHhFMcb4T/view?usp=drivesdk">More Details</a>
+            </div>
+          </div>
+      </section>
+      
+      
+ <!-- about -->
+ 
+ <section class="about">
+     <div class="abouts-me">
+         <h1>About Me</h1>
+         <p>
+             I'm a highly self-motivated and goal-oriented individual with strong leadership qualities and a commitment to excellence<br>
+             I take ownership of mmmy responsibilities and stay dedicated until taks are susccesfully completed.<br>
+             My interactive personality allow me to collaborate effectively with diverse teams.
+             <span id="moreText" style="display: none;">
+                With a keen interest in learning new technologies and concepts, 
+                I actively seek opportunities to grow and improve. 
+             <br><br>
+              "In addition to my technical pursuits, I have a strong passion for fashion and costume design.
+               I enjoy exploring creative expression through designing unique outfits and experimenting with styles. 
+               This creative interest enhances my attention to detail, sense of aesthetics, and ability to think innovatively—qualities that I bring into both my design work and technical projects."
+
+         </span>
+         </p>
+         <button id="readMoreBtn" class="read-more-btn" onclick="toggleText()">More Details</Details></button>
+     </div>
+ </section>
+ <script>
+     function toggleText() {
+         var moreText = document.getElementById("moreText");
+         var btnText = document.getElementById("readMoreBtn");
+ 
+         if (moreText.style.display === "none") {
+             moreText.style.display = "inline";
+             btnText.textContent = "Read Less";
+         } else {
+             moreText.style.display = "none";
+             btnText.textContent = "Read More";
+         }
+     }
+ </script>
+ 
+             <section id="contact">
+                <h2>Contact Me</h2>
+                <form action="https://formspree.io/f/xvgaoalk" method="POST">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+              
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+              
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+              
+                  <button type="submit">Send Message</button>
+                </form>
+              </section>
+ 
+ <!-- contact -->
+ <section class="contact">
+    <footer class="foot">
+        <!-- <div>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+        </div> -->
+        <h1>contact with me</h1>
+        <div class="contact-main">
+
+            <div>
+                <a href="https://github.com/keerthanaBairi"><img src=""><i class="bi bi-github"></i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg></a>
+            </div>
+            <div>
+               <a href="https://t.me/your_telegram_username">
+                   <i class="bi bi-telegram"></i>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                       <path d="M16 3.038c0-.69-.562-1.25-1.25-1.25H1.25C.56 1.788 0 2.348 0 3.038v9.924c0 .69.562 1.25 1.25 1.25h13.5c.688 0 1.25-.56 1.25-1.25V3.038zm-3.584 1.333L7.443 10.15l-2.298-.922c-.318-.13-.318-.345.004-.478l8.503-3.622a.384.384 0 0 1 .536.42l-1.592 7.387a.384.384 0 0 1-.69.13l-2.12-3.083z"/>
+                   </svg>
+               </a>
+           </div>
+            
+            <div>   
+                <a href="https://www.linkedin.com/in/keerthana-reddy-bairi-05382a2a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg></div>
+
+
+        </div>
+        <div><p>&copy; 2025 | Designed and developed by Keerthana Bairi using HTML & CSS</p></div>
+ </body>
+ </html>
