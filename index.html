@@ -10,7 +10,7 @@
  <!-- hero section  -->
      <section class="hero">
          <div class="hero h-text">
-          <h1>KEERTHANA BAIRI</h1>
+          <h1 id="typing-name"></h1>
           <p>
           <p id="short-intro">I am Keerthana Bairi , an engineering student with a strong passion for coding, innovation, and problem-solving.</p>
           <p id="full-intro">I am a very passionate and ambitious B.Tech Computer Science and Engineering student  With a strong interest in web development and  I am continuously honing my skills to build innovative and efficient solutions.
@@ -19,7 +19,8 @@
             In addition to my technical skills, I have leadership and management experience. As a college coordinator, I have successfully managed large-scale events and placements, ensuring smooth organization and discipline balancing my academic and professional responsibilities effectively.
             <br><br><br><br>
             <center>
-            <img src="image4.jpg" alt="my photo" width="500" height="500">
+            <img src="image4.jpg" alt="my photo" width="500" height="500" class="hero-img-effect">
+
             </center>
         </p>
          </p>
@@ -53,7 +54,7 @@
                   my education, projects, internships, and<br>
                    coding skills. See how I’ve grown as an<br>
                     engineering student."</p>
-             <a href="https://drive.google.com/file/d/1Grra50KXAfWPE8xOtVz_i1m7tGMGfI54/view?usp=drivesdk">my resume</a>
+             <a href="https://drive.google.com/file/d/1UX9TqeBTe9k23qPzDXve_XsJBg0xt_5N/view?usp=drivesdk">my resume</a>
          </div>
      </section>
  
@@ -209,7 +210,7 @@
  
              <section id="contact">
                 <h2>Contact Me</h2>
-                <form action="https://formspree.io/f/xvgaoalk" method="POST">
+                <form action="https://formspree.io/f/xwpqrkoe" method="POST">
                   <label for="name">Name</label>
                   <input type="text" id="name" name="name" required />
               
@@ -257,5 +258,41 @@
 
         </div>
         <div><p>&copy; 2025 | Designed and developed by Keerthana Bairi using HTML & CSS</p></div>
+        <script>
+  const nameText = "KEERTHANA BAIRI";
+  let i = 0;
+  function typeWriter() {
+    if (i < nameText.length) {
+      document.getElementById("typing-name").innerHTML += nameText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 150); // typing speed
+    }
+  }
+  window.onload = typeWriter;
+</script>
+<script>
+  // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll('.project');
+
+    function showProjectsOnScroll() {
+      const triggerBottom = window.innerHeight * 0.9;
+
+      projects.forEach((project) => {
+        const projectTop = project.getBoundingClientRect().top;
+
+        if (projectTop < triggerBottom) {
+          project.classList.add('show');
+        } else {
+          project.classList.remove('show');
+        }
+      });
+    }
+
+    // Run initially and on scroll
+    showProjectsOnScroll();
+    window.addEventListener('scroll', showProjectsOnScroll);
+  });
+</script>
  </body>
  </html>
